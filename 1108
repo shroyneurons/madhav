@@ -1,1 +1,15 @@
-
+string defangIPaddr(string address) {
+        
+        int n=address.size(),i=0;
+        string s="";
+        
+        while(i<n)
+        {
+            if(address[i]=='.') 
+                s+="[.]";
+            else
+                s+=address[i];
+            i++;
+        }
+        return s;
+    }
