@@ -1,0 +1,15 @@
+int numJewelsInStones(string J, string S) {
+        
+        int n=J.size(),m=S.size(),i=0,cnt=0;
+        int hs[58]={0};
+        if(n==0||m==0)
+            return 0;
+        
+        for(i=0;i<n;i++)
+            hs[J[i]-'A']=1;
+        for(i=0;i<m;i++)
+            if(hs[S[i]-'A'])
+                cnt++;
+        
+        return cnt;
+    }
